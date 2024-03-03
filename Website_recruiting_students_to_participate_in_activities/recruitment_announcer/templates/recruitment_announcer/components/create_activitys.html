@@ -1,0 +1,121 @@
+{% load crispy_forms_tags %}
+
+<div class="px-5 font-bold pt-3 w-full h-aoto left-aoto absolute top-aoto border border-gray-600 bg-gray-400 shadow-md">
+    สร้างประกาศรับสมัครนักศึกษาเข้าร่วมกิจกรรม <br>
+    <div class="px-5">
+        : กรอกข้อมูลการประกาศรับสมัคร
+    </div>
+    <br>
+</div>
+<div class="w-full h-full pt-0">
+      <div class="static w-full h-20 flex flex-col mx-auto p-3 border border-gray-600  shadow-md">
+                      {{ course.title_th }}
+                 </div>                
+              </div>
+            </div>
+          </div>
+      </div>
+    </a>
+  </div>
+  <div class="w-full pt-0">
+      <div class="static w-full h-aoto flex flex-col mx-auto p-3 border border-gray-600 shadow-md">
+        <form action="{% url 'create_activity' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <!-- {{ form|crispy }} -->
+    <div class="flex justify-around my-3 drop-shadow-xl rounded-xl bg-blue-100
+            px-10 py-2">
+        <label for="id_activity_name" class="px-6">ชื่อกิจกรรม :</label>
+        <input type="text" name="activity_name"  id="id_activity_name"
+            class="rounded-md drop-shadow-md px-6">
+    </div>
+    <div class="flex justify-around my-3 drop-shadow-xl rounded-xl bg-blue-100
+            px-10 py-2">
+        <label for="id_activity_type">ด้านที่ :</label>
+        <input type="text" name="activity_type" id="id_activity_type"
+        class="rounded-md drop-shadow-md px-6">
+    </div>
+    <div class="flex justify-around my-3 drop-shadow-xl rounded-xl bg-blue-100
+            px-10 py-2">
+        <label for="id_start_date_create_activity">วันที่เปิดรับสมัคร :</label>
+        <input type="date" name="start_date_create_activity" id="id_start_date_create_activity"
+        class="rounded-md drop-shadow-md px-6">
+    </div>
+    <div class="flex justify-around my-3 drop-shadow-xl rounded-xl bg-blue-100
+            px-10 py-2">
+        <label for="id_due_date_create_activity">วันที่ปิดรับสมัคร :</label>
+        <input type="date" name="due_date_create_activity" id="id_due_date_create_activity"
+        class="rounded-md drop-shadow-md px-6">
+    </div>
+    <div class="flex justify-around my-3 drop-shadow-xl rounded-xl bg-blue-100
+            px-10 py-2">
+        <label for="id_target_number">จำนวนเป้าหมาย :</label>
+        <input type="text" name="target_number" id="id_target_number"
+        class="rounded-md drop-shadow-md px-6">
+    </div>
+    <div class="flex justify-around my-3 drop-shadow-xl rounded-xl bg-blue-100
+            px-10 py-2">
+        <label for="id_place">สถานที่จัดกิจกรรม :</label>
+        <input type="text" name="place" id="id_place"
+        class="rounded-md drop-shadow-md px-6">
+    </div>
+    <div class="flex justify-around my-3 drop-shadow-xl rounded-xl bg-blue-100
+            px-10 py-2">
+        <label for="id_start_date_activity">วันที่จัดกิจกรรม :</label>
+        <input type="date" name="start_date_activity" id="id_start_date_activity"
+        class="rounded-md drop-shadow-md px-6">
+    </div>
+    <div class="flex justify-around my-3 drop-shadow-xl rounded-xl bg-blue-100
+            px-10 py-2">
+        <label for="id_due_date_activity">วันที่สิ้นสุดกิจกรรม :</label>
+        <input type="date" name="due_date_activity" id="id_due_date_activity"
+        class="rounded-md drop-shadow-md px-6">
+    </div>
+    <div class="flex justify-around my-3 drop-shadow-xl rounded-xl bg-blue-100
+            px-10 py-2">
+        <label for="id_person_responsible_project">ผู้รับผิดชอบโครงการ :</label>
+        <input type="text" name="person_responsible_project" id="id_person_responsible_project"
+        class="rounded-md drop-shadow-md px-6">
+    </div>
+    <div class="flex justify-around my-3 drop-shadow-xl rounded-xl bg-blue-100
+            px-10 py-2">
+        <label for="id_project_consultant">ที่ปรึกษาโครงการ :</label>
+        <input type="text" name="project_consultant" id="id_project_consultant"
+        class="rounded-md drop-shadow-md px-6">
+    </div>
+    <div class="flex justify-around my-3 drop-shadow-xl rounded-xl bg-blue-100
+            px-10 py-2">
+        <label for="id_description">คำอธิบาย :</label>
+        <input type="text" name="description" id="id_description"
+        class="rounded-md drop-shadow-md px-6">
+    </div>
+    <div class="flex justify-around my-3 drop-shadow-xl rounded-xl bg-blue-100
+            px-10 py-2">
+        <label for="id_img_activity">รูปกิจกรรม :</label>
+        <input type="file" name="img_activity" accept="image/*" id="id_img_activity"
+        class="rounded-md drop-shadow-md px-6">
+    </div>
+    <div class="text-center">
+        <br>
+    <button type="submit" class="bg-cyan-100 px-6 py-2 round-md drop-shadow-md">
+        สร้างกิจกรรม
+    </button>
+</div>
+        </form>
+                 </div>
+            <!-- {% for i in db %}
+                {{i.id}}<br>
+                {% if i.img_activity %}
+                    <img src="{{i.img_activity.url}}" alt="media/activity/images" />
+                {% endif %}
+                    <a href="{% url 'delete' i.id %}" class="px-2">
+                    <svg class="w-8 h-8 text-red-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m6 4.125l2.25 2.25m0 0l2.25 2.25M12 13.875l2.25-2.25M12 13.875l-2.25 2.25M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"></path>
+                    </svg>
+                </a>
+            {% endfor %} -->
+              </div>
+            </div>
+          </div>
+      </div>
+    </a>
+  </div>

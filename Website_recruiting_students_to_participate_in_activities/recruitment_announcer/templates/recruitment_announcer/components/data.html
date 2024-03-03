@@ -1,0 +1,44 @@
+<div class="px-5 font-bold pt-3 w-full h-aoto left-aoto absolute top-aoto border border-gray-600 bg-gray-400 shadow-md">
+        ประกาศรับสมัคร<br>
+        <div class="px-5">
+            คณะ : <input type="text" name="" id=""> 
+            เดือน : <input type="text" name="" id=""> 
+            ปี : <input type="text" name="" id="">
+            <button class="bg-transparent hover:bg-[#DDDDDD] text-black font-semibold hover:text-white py-0 px-4 border border-gray-300 hover:border-transparent rounded" type="submit">ดูกิจกรรมในเดือนที่เลือก</button><br>
+        </div>
+        <br>
+</div>
+        <div class="w-full pt-0">
+            <a href="/course/{{ course.id }}">
+              <div class="static w-full h-20 flex flex-col mx-auto p-3  shadow-md">
+              </div>
+    
+        <div class="w-full  pt-0">
+          {% for i in db %}
+
+            <a href="{{i.id}}">
+              {% endfor %}
+
+                {% for i in db %}
+                              <div class="w-full align-baseline mt-2 pt-5  ">
+                                <div class="w-full pt-0 invisible md:visible flex justify-around align-baseline border border-gray-600 ">{{i.activity_name}}
+                                <a href="#" class="alignt-baseline border-black pm-4 pt-0">{{i.activity_name}} <br>
+                                : รับจำนวน {{i.target_number}} คน</a>
+                                <a href="#" class="alignt-baseline border-black pt-0" >
+                                  {% if i.img_activity %}
+                                    <img src="{{i.img_activity.url}}" alt="media/activity/images" width="50" height="50"/>
+                                  {% endif %} </a>
+                                <a href="#" class="alignt-baseline border-black pt-0">ด้านที่ {{i.activity_type}}</a>
+                                <a href="#" class="alignt-baseline border-black pt-0">คณะวิทยาศาสตร์</a>
+                                <a href="#" class="alignt-baseline text-amber-400 pt-0">กำลังรับสมัคร</a>
+                                </div>
+                              </div>
+                         </div>
+                         {% endfor %}
+                      </div>
+                    </div>
+                  </div>
+  
+            </a>
+        </div>
+ 
