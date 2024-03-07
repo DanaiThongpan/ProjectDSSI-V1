@@ -6,4 +6,5 @@ from django.contrib.auth.decorators import login_required
 
 urlpatterns = [
     path('',login_required(home,login_url="/login"), name='home'),
+    path('activity/<int:id>/', activity)
 ]

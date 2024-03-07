@@ -1,43 +1,33 @@
-<div class="px-5 font-bold pt-3 w-full h-aoto left-aoto absolute top-aoto border border-gray-600 bg-gray-400 shadow-md">
-    ประกาศรับสมัคร<br>
-    <div class="px-5">
-        คณะ : <input type="text" name="" id=""> 
-        เดือน : <input type="text" name="" id=""> 
-        ปี : <input type="text" name="" id="">
-        <button class="bg-transparent hover:bg-[#DDDDDD] text-black font-semibold hover:text-white py-0 px-4 border border-gray-300 hover:border-transparent rounded" type="submit">ดูกิจกรรมในเดือนที่เลือก</button><br>
+<div class="w-full pt-0">
+  <div class="static w-full h-20 flex flex-col mx-auto p-3  shadow-md">
     </div>
-    <br>
-</div>
-    <div class="w-full pt-0">
-        <a href="/course/{{ course.id }}">
-          <div class="static w-full h-20 flex flex-col mx-auto p-3  shadow-md">
-          </div>
-
-    <div class="w-full  pt-0">
-      {% for i in db %}
-
-        <a href="{{i.id}}">
-          {% endfor %}
-
-            {% for i in db %}
-                          <div class="w-full align-baseline mt-2 pt-5  ">
-                            <div class="w-full pt-0 invisible md:visible flex justify-around align-baseline border border-gray-600 ">{{i.activity_name}}
-                            <a href="#" class="alignt-baseline border-black pm-4 pt-0">{{i.activity_name}} <br>
-                            : รับจำนวน {{i.target_number}} คน</a>
-                            <a href="#" class="alignt-baseline border-black pt-0" >
-                              {% if i.img_activity %}
-                                <img src="{{i.img_activity.url}}" alt="media/activity/images" width="50" height="50"/>
-                              {% endif %} </a>
-                            <a href="#" class="alignt-baseline border-black pt-0">ด้านที่ {{i.activity_type}}</a>
-                            <a href="#" class="alignt-baseline border-black pt-0">คณะวิทยาศาสตร์</a>
-                            <a href="#" class="alignt-baseline text-amber-400 pt-0">กำลังรับสมัคร</a>
-                            </div>
-                          </div>
-                     </div>
-                     {% endfor %}
-                  </div>
+{% for i in db %}
+<body class="w-full pt-0">
+  <div class="container mx-auto p-4">
+      <table class="w-full table-auto">
+          <thead>
+              <tr>            
+                <th class="border px-4 py-2">{{i.start_date_create_activity}}</th>
+                <th class="border text-xl"><a href="activity/{{ i.id }}">{{i.activity_name}}</a><br>
+                <div class="text-sm">
+                  : รับจำนวน {{i.target_number}} คน
                 </div>
-              </div>
-
-        </a>
-    </div>
+                </th>
+                  {% if i.img_activity %}
+                  <th class="border px-4 py-3 invisible md:visible flex justify-around"><img src="{{i.img_activity.url}}" alt="media/activity/images" width="70" height="70"></th>
+                  {% endif %}
+                  <th class="border text-xl">ด้านที่ {{i.activity_type}}<br>
+                  <div class="text-sm">
+                  จำนวนรับ / เหลือ<br>
+                  10 / 10
+                  </div>
+                  </th>
+                <th class="border">คณะวิทยาศาสตร์</th>
+                <th class="border">กำลังรับสมัคร</th>
+              </tr>
+          </thead>
+      </table>
+  </div>
+</body>
+</html>
+{% endfor %}

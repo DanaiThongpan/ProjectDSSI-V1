@@ -5,7 +5,7 @@
 
 
         <div class="px-0 py-0 pt-1 flex">
-                <a class="text-black hover:text-amber-400 hover:rounded-xlhover:border-2 py-1" href="/recruitment_announcer/">
+                <a class="text-black hover:text-amber-400 hover:rounded-xlhover:border-2 py-1" href="/students/">
                         <div class="w-8 h-8 inline">
                                 <img src="https://student.ubu.ac.th/assets/img/Ubu_logo.png" alt="" width="50" height="50">
                         </div>        
@@ -78,11 +78,10 @@
                 </button>
         <div id="dropdownMenu2" class="w-aoto h-aoto hidden absolute right-0 mt-2 origin-top-right rounded-md shadow-lg z-50 min-w-[200px] text-left">
                 <div class="py-1 bg-white border rounded-md shadow-xs">
-                    <a href="/recruitment_announcer/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">หน้าแรก</a>
+                    <a href="/students/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">หน้าแรก</a>
                     <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">แก้ไขข้อมูลส่วนตัว</a>
-                    <a href="{% url 'create_activity' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">สร้างประกาศรับสมัคร</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">ประวัติการประกาศรับสมัคร</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">เอกสาร</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">แก้ไขข้อมูลความสามารถ</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">ประวัติการเข้าร่วมกิจกรรม</a>
                     <a href="{% url 'logout' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">ออกจากระบบ</a>
                 </div>
             </div>
@@ -107,12 +106,9 @@
     </div>
   </head>
   <div class="px-5 fixed font-bold text-black pt-3 mt-20 w-full h-aoto left-aoto absolute top-aoto border border-gray-600 bg-gray-400 shadow-md">
-        ประกาศรับสมัคร<br>
+        รายละเอียดกิจกรรม<br>
         <div class="px-5">
-            คณะ : <input type="text" name="" id=""> 
-            เดือน : <input type="text" name="" id=""> 
-            ปี : <input type="text" name="" id="">
-            <button class="bg-transparent hover:bg-[#DDDDDD] text-black font-semibold hover:text-white py-0 px-4 border border-gray-300 hover:border-transparent rounded" type="submit">ดูกิจกรรมในเดือนที่เลือก</button><br>
+            : กรุณาอ่านรายละเอียดก่อนสมัคร
         </div>
         <br>
     </div>

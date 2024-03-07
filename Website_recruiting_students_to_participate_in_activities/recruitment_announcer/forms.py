@@ -7,16 +7,16 @@ class forms_create_activity(forms.ModelForm):
         fields = '__all__'
 
         labels = {
-            'img_activity' : 'รูปกิจกรรม',
-            'activity_name'  : 'รูปกิจกรรม',
-            'activity_type'  : 'รูปกิจกรรม',
-          'Start date create activity' : 'รูปกิจกรรม',
-'Due date create activity:'  : 'รูปกิจกรรม',
-            'Target number: ' : 'รูปกิจกรรม',
-         '   Place: ' : 'รูปกิจกรรม',
-         '   Start date activity:'  : 'รูปกิจกรรม',
-         '   Due date activity: ' : 'รูปกิจกรรม',
-       '     Person responsible project:'  : 'รูปกิจกรรม',
-'            Project consultant:'  : 'รูปกิจกรรม',
-    '        Description: ' : 'รูปกิจกรรม',
+            'img_activity' : 'รูปกิจกรรม ',
+            'activity_name' : 'ชื่อกิจกรรม ',
+            'activity_type' : 'ด้านที่ ',
+            'start_date_create_activity' : 'วันที่เปิดรับสมัคร ',
+            'due_date_create_activity' : 'วันที่ปิดรับสมัคร ',
+            'target_number' : 'จำนวนเป้าหมาย ',
+            'place' : 'สถานที่จัดกิจกรรม ',
+            'start_date_activity' : 'วันที่จัดกิจกรรม ',
+            'due_date_activity' : 'วันที่สิ้นสุดกิจกรรม ',
+            'person_responsible_project' : 'ผู้รับผิดชอบโครงการ ',
+            'project_consultant' : 'ที่ปรึกษาโครงการ ',
+            'description' : 'คำอธิบาย ',
         }

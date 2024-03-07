@@ -22,3 +22,7 @@ from recruitment_announcer.models import db_create_activity
 def home(req):
     c = db_create_activity.objects.all()
     return render(req, 'students/home.html',{'db':c})
+
+def activity(req, id):
+    a = db_create_activity.objects.get(pk=id)
+    return render(req, 'students/activity.html', {'i':a})
